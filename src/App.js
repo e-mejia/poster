@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import Logo from "./images/logo512.png";
+import "./App.css";
+import Poster from "./components/Poster";
 
 function App() {
+  const data = {
+    image: { Logo },
+    title: "React",
+    text: "The best thing since jQuery, probably.",
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Poster
+        image={Logo}
+        title={data.title}
+        text={data.text}
+        alt="React logo"
+      />
     </div>
   );
 }
